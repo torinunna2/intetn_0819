@@ -16,7 +16,7 @@
 
 
     <EditText
-        android:id="@+id/messageTxt"
+        android:id="@+id/messageEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="다른 화면에 전달할 내용 입력" />
@@ -36,6 +36,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:orientation="horizontal" >
 
         <TextView
@@ -57,8 +58,28 @@
             android:text="닉네임 변경" />
 
 
-
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연결할 전화번호"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/phoneNumEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호 입력"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/dialBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화 걸기 (DIAL) " />
+
+
 
 
 
