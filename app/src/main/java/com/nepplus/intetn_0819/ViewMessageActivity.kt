@@ -19,5 +19,6 @@ class ViewMessageActivity : AppCompatActivity() {
 
        messageTxt.text = receivedMessage
 
+
     }
 }
