@@ -1,6 +1,7 @@
 package com.nepplus.intetn_0819
 
 import android.app.Activity
+import android.app.Notification
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,31 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        callBtn.setOnClickListener {
+
+            val phoneNum = phoneNumEdt.text.toString()
+
+            val myUri = Uri.parse("tel:${phoneNum}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+
+        }
+
+        smsBtn.setOnClickListener {
+
+            val phoneNum = phoneNumEdt.text.toString()
+
+            val myUri = Uri.parse("smsto:${phoneNum}")
+            val myIntent = Intent(Intent.ACTION_SENDTO, myUri)
+            myIntent.putExtra("sms", "자동으로 내용 입력")
+                    startActivity(myIntent)
+
+
+
+        }
+
+
 
         dialBtn.setOnClickListener {
 
@@ -36,6 +62,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
 
+        }
+
+        kakaoStoreBtn.setOnClickListener {
+            val myUri = Uri.parse("market://detalis")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)
+            startActivity(myIntent)
         }
 
         editNicknameBtn.setOnClickListener {

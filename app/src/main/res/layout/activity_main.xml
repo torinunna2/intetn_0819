@@ -80,6 +80,24 @@
         android:text="전화 걸기 (DIAL) " />
 
 
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="전화 걸기 (call) " />
+
+    <Button
+        android:id="@+id/smsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="문자 보내기 " />
+
+    <Button
+        android:id="@+id/kakaoStoreBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="카카오톡 앱 다운 링크" />
+
 
 
 
